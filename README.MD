@@ -46,5 +46,3 @@ If you set `auth` to `true`, you should provide `username` and `password`.
 You should list your servers in order. If one of them cannot be connected for `maxfail` times, it will be marked as downed-server until `recovertime` seconds later. Please pay attention that you must ensure the password and encryption method is correct. Because we cannot distinguish users' malicious requests and the wrong password of shadowsocks servers, here we judge server status through if we can connect it.
 
 `remotetimeout` is the timeout connecting remote servers, and `insidetimeout` is the one to clients. `starttimeout`  is the timeout of the first communication. A short `starttimeout` can decrease the waiting time of the false packet, long `remotetimeout` and `insidetimeout` can allow long connection, for example to decrease the reconnecting of Telegram.
-
-You can use `systemd` or `supervisor` to run the daemon. The example configure of supervisor is at the bottom.
